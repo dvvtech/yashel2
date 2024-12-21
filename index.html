@@ -11,10 +11,11 @@
     <header class="bg-red-100 shadow">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <img src="lotus3.png" alt="Лотус" class="h-12">
+                <img src="lotus.png" alt="Лотус" class="h-12">
                 <h1 class="text-2xl font-bold text-red-800">Альтернативная Психология</h1>
             </div>
-            <nav class="space-x-6">
+            <nav class="space-x-6 hidden md:block">
+                <a href="#main" class="text-red-600 hover:text-red-800">Главная</a>
                 <a href="#psychography" class="text-red-600 hover:text-red-800">Психография</a>
                 <a href="#about" class="text-red-600 hover:text-red-800">О Нас</a>
                 <a href="#method" class="text-red-600 hover:text-red-800">Метод</a>
@@ -22,6 +23,16 @@
                 <a href="#news" class="text-red-600 hover:text-red-800">Новости</a>
                 <a href="#contact" class="text-red-600 hover:text-red-800">Контакты</a>
             </nav>
+            <button class="md:hidden text-red-600" id="menu-toggle">&#9776;</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col bg-red-100 px-4 py-2">
+            <a href="#main" class="py-1 text-red-600 hover:text-red-800">Главная</a>
+            <a href="#psychography" class="py-1 text-red-600 hover:text-red-800">Психография</a>
+            <a href="#about" class="py-1 text-red-600 hover:text-red-800">О Нас</a>
+            <a href="#method" class="py-1 text-red-600 hover:text-red-800">Метод</a>
+            <a href="#products" class="py-1 text-red-600 hover:text-red-800">Продукты</a>
+            <a href="#news" class="py-1 text-red-600 hover:text-red-800">Новости</a>
+            <a href="#contact" class="py-1 text-red-600 hover:text-red-800">Контакты</a>
         </div>
     </header>
 
@@ -35,46 +46,41 @@
 
     <!-- Main Sections -->
     <main class="container mx-auto px-4 py-8">
-        <!-- Психография -->
+        <!-- Главная -->
+        <section id="main" class="mb-12 text-center">
+            <h2 class="text-2xl font-bold mb-4 text-red-800">Главная</h2>
+            <p class="text-gray-700">Добро пожаловать на наш сайт! Здесь вы найдете всю необходимую информацию о наших услугах и методах.</p>
+        </section>
+
+        <!-- Sections -->
         <section id="psychography" class="mb-12 text-center">
             <h2 class="text-2xl font-bold mb-4 text-red-800">Психография</h2>
             <p class="text-gray-700">Здесь будет описание раздела Психография.</p>
         </section>
 
-        <!-- О Нас -->
         <section id="about" class="mb-12 text-center">
             <h2 class="text-2xl font-bold mb-4 text-red-800">О Нас</h2>
             <p class="text-gray-700">Здесь будет информация о нас и нашей миссии.</p>
         </section>
 
-        <!-- Метод -->
         <section id="method" class="mb-12 text-center">
             <h2 class="text-2xl font-bold mb-4 text-red-800">Метод</h2>
             <p class="text-gray-700">Подробное описание метода, используемого нами.</p>
         </section>
 
-        <!-- Продукты -->
         <section id="products" class="mb-12 text-center">
             <h2 class="text-2xl font-bold mb-4 text-red-800">Продукты</h2>
             <p class="text-gray-700">Описание продуктов, которые мы предлагаем.</p>
         </section>
 
-        <!-- Новости -->
         <section id="news" class="mb-12 text-center">
             <h2 class="text-2xl font-bold mb-4 text-red-800">Новости</h2>
             <p class="text-gray-700">Последние новости и обновления.</p>
         </section>
 
-        <!-- Контакты -->
         <section id="contact" class="mb-12 text-center">
             <h2 class="text-2xl font-bold mb-4 text-red-800">Контакты</h2>
             <p class="text-gray-700">Свяжитесь с нами для получения дополнительной информации.</p>
-        </section>
-		
-		<!-- Контакты -->
-        <section id="contacts" class="mb-12 text-center">
-            <h2 class="text-2xl font-bold mb-4 text-red-800">Контакты</h2>
-            <p class="text-center text-gray-600">Свяжитесь с нами, чтобы узнать больше или записаться на консультацию.</p>
             <form class="max-w-md mx-auto mt-6">
                 <input type="text" placeholder="Ваше имя" class="w-full p-2 border border-gray-300 rounded mb-4">
                 <input type="email" placeholder="Ваш email" class="w-full p-2 border border-gray-300 rounded mb-4">
@@ -90,5 +96,12 @@
             <p class="text-red-600">&copy; 2024 Альтернативная Психология. Все права защищены.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
